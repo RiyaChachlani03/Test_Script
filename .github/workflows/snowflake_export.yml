@@ -24,8 +24,9 @@ jobs:
       - name: Run script
         run: python snowflake_export.py
 
-      - name: Upload CSV
-        uses: actions/upload-artifact@v3
-        with:
-          name: snowflake-output
-          path: output_*.csv
+     - name: Upload output CSV
+       uses: actions/upload-artifact@v3.1.3
+       with:
+        name: snowflake-output
+        path: output_*.csv
+
